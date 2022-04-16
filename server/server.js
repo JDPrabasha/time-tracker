@@ -1,14 +1,15 @@
-// api/server.js
-
 const express = require("express");
 const app = express();
+
+const cors = require("cors");
+app.use(cors());
 
 const sequelize = require("./util/database");
 
 const Project = require("./models/project");
 const Log = require("./models/log");
 
-const cors = require("cors");
+//set up sequelize initialization
 
 Project.hasMany(Log);
 
@@ -36,12 +37,16 @@ sequelize
     console.log(err);
   });
 
-app.use(cors());
+//set up /project route
+
+const projectRoute = require("./routes/Project");
+
+app.use("/project", projectRoute);
+
+// verify connection to server
 
 app.get("/", function (req, res) {
-  Project.findAll().then((projects) => {
-    res.send(projects);
-  });
+  res.send("Successfully connected to the server!");
 });
 
 app.listen(3000, () => {
