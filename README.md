@@ -1,6 +1,8 @@
 # Time-Tracker Application
 
-Time-Tracker (working title) is an application that can be used to keep track of the time you spend on your projects every day. It serves as a measure of your daily productivity. The primary purpose of building this application is to overcome the paywall presented by similar applications, along with presenting a slick UI/UX experience. 
+Time-Tracker (working title) is an application that can be used to keep track of the time you spend on your projects every day. It serves as a measure of your daily productivity. 
+
+The primary purpose of building this application is to overcome the paywall presented by similar applications, along with presenting a slick UI/UX experience. 
 
 ## Features
 
