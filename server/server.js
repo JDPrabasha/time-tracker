@@ -36,12 +36,14 @@ sequelize
     console.log(err);
   });
 
-// app.use(cors());
+app.use(cors());
 
-// app.get("/", function (req, res) {
-//   res.send("It's working!");
-// });
+app.get("/", function (req, res) {
+  Project.findAll().then((projects) => {
+    res.send(projects);
+  });
+});
 
-// app.listen(3000, () => {
-//   console.log("app listening on port 3000");
-// });
+app.listen(3000, () => {
+  console.log("app listening on port 3000");
+});
