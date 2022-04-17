@@ -1,0 +1,13 @@
+.project {
+  margin-bottom: 0.6em;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.project__title {
+  font-weight: var(--font-weight-title);
+}
