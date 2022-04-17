@@ -1,5 +1,5 @@
 import React from "react";
-import "./Project.scss";
+import "./Insights.scss";
 
 function Insights() {
   return <div>Insights</div>;
