@@ -4,12 +4,14 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
-const sequelize = require("./util/database");
-
-const Project = require("./models/project");
-const Log = require("./models/log");
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //set up sequelize initialization
+
+const sequelize = require("./util/database");
+const Project = require("./models/project");
+const Log = require("./models/log");
 
 Project.hasMany(Log);
 
