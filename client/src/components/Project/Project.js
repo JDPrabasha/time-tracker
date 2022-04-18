@@ -12,7 +12,7 @@ function Project(props) {
           +
         </a>
       </div>
-      {isOpen && <Modal setIsOpen={setIsOpen} />}
+      {isOpen && <Modal setIsOpen={setIsOpen} id={props.id} />}
     </div>
   );
 }

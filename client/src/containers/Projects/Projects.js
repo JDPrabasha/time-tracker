@@ -19,7 +19,7 @@ function Projects() {
     <div>
       <h1>Quick add</h1>
       {projects.map((project) => (
-        <Project name={project.name} key={project.id} />
+        <Project name={project.name} key={project.id} id={project.id} />
       ))}
     </div>
   );
