@@ -14,6 +14,7 @@ const Project = require("./models/project");
 const Log = require("./models/log");
 
 Project.hasMany(Log);
+Log.belongsTo(Project);
 
 sequelize
   .sync()
@@ -27,8 +28,10 @@ sequelize
 //set up /project route
 
 const projectRoute = require("./routes/Project");
+const logRoute = require("./routes/Log");
 
 app.use("/project", projectRoute);
+app.use("/logs", logRoute);
 
 // verify connection to server
 
