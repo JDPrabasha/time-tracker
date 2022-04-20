@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    image: "dulaj/time-tracker-backend"
+    ports:
+      - "3000:3000"
+  frontend:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+    image: "dulaj/time-tracker-frontend"
+    ports:
+      - "5001:5001"
+    links:
+      - "backend:be"
