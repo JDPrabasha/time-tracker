@@ -17,19 +17,17 @@ This repository contains both the client and server side of the aplication. Both
 
 ## How to Run
 
-### Client
+### Prerequisites
 
-cd into the client folder and run
+- A running version of mysql
+- nodeJS
 
-### `npm install`
+### Setup
 
-to install the dependancies.
+1. Create a database called "time_tracker" using mysql
+2. Alter database credentials as neccessary in /server/util/database.js
 
-Then start the Client application by running:
-
-### `npm start`
-
-### Server
+### Step 1 : Running the Server application
 
 cd into the server folder and run
 
@@ -41,5 +39,26 @@ Then start the Server application by running:
 
 ### `node server`
 
+This will run an instance of the server on http://localhost:3000
 
+### Step 2 : Running the Client application
+
+cd into the client folder and run
+
+### `npm install`
+
+to install the dependancies.
+
+Then start the Client application by running:
+
+### `npm start`
+
+### Step 3 : Add your projects
+
+After successfully running the server, Sequelize will create a `project` table in the newly created database. Add your projects to this table
+(Note : Add projects feature will be added to the client application soon)
+
+### Step 4 : Access the client application
+
+You can now access the client application running on your browser and add your logs as neccessary
 
