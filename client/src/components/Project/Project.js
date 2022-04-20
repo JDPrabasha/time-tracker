@@ -2,16 +2,20 @@ import "./Project.scss";
 import { default as Modal } from "../Modal/Modal";
 import { React, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { RiAddLine } from "react-icons/ri";
 
 function Project(props) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="project">
       <div className="row">
-        <h1 className="project__title">{props.name}</h1>
-        <a className="add" onClick={() => setIsOpen(true)}>
-          +
-        </a>
+        <p className="project__title">{props.name}</p>
+
+        <RiAddLine
+          style={{ marginBottom: "-3px" }}
+          className="project__add"
+          onClick={() => setIsOpen(true)}
+        />
       </div>
       <AnimatePresence
         // Disable any initial animations on children that

@@ -5,7 +5,10 @@ import { Logs, Insights, Projects } from "./containers";
 function App() {
   return (
     <div className="App">
-      <Projects />
+      <div className="row">
+        <Projects />
+        <Logs />
+      </div>
     </div>
   );
 }

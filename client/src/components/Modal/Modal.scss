@@ -49,6 +49,16 @@
 .form input,
 textarea {
   width: 60%;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
 }
 
 .form textarea {
@@ -84,7 +94,7 @@ textarea {
   color: #2c3e50;
   background: white;
   transition: all 0.25s ease;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+
   position: absolute;
   right: 0;
   top: 0;
@@ -109,6 +119,7 @@ textarea {
   color: #fff;
   background: #3e82ff;
   transition: all 0.25s ease;
+  font-weight: bold;
 }
 
 .deleteBtn:hover {
@@ -128,6 +139,7 @@ textarea {
   color: #2c3e50;
   background: #fcfcfc;
   transition: all 0.25s ease;
+  font-weight: bold;
 }
 
 .cancelBtn:hover {

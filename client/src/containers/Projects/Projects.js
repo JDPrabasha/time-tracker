@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./Projects.scss";
 import { Project } from "../../components";
+import { HiOutlineClipboardList } from "react-icons/hi";
 
 function Projects() {
   const axios = require("axios");
@@ -16,11 +17,17 @@ function Projects() {
   console.log(projects);
 
   return (
-    <div>
-      <h1>Quick add</h1>
-      {projects.map((project) => (
-        <Project name={project.name} key={project.id} id={project.id} />
-      ))}
+    <div className="projects">
+      <div className="projects__container">
+        <div className="row projects__header">
+          <HiOutlineClipboardList className="clipboard" />
+
+          <h1 className="projects__title">Quick add</h1>
+        </div>
+        {projects.map((project) => (
+          <Project name={project.name} key={project.id} id={project.id} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 .project {
   margin-bottom: 0.6em;
+  width: 60%;
 }
 
 .row {
@@ -8,6 +9,26 @@
   gap: 1em;
 }
 
-.project__title {
-  font-weight: var(--font-weight-title);
+.project__add {
+  color: var(--color-purple);
+  margin-left: auto;
+}
+
+.project__add:hover {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+}
+@keyframes scale-up-center {
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
 }

@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.projects__container {
+  padding: 2em;
+  border-radius: 50px;
+  background-color: #ebebeb;
+}
+
+.projects__header {
+  margin-bottom: 1em;
+}
+
+.projects__title {
+  font-weight: var(--font-weight-emphasis);
+}
+
+.clipboard {
+  font-size: 2em;
+}
