@@ -56,6 +56,7 @@ Then start the Client application by running:
 ### Step 3 : Add your projects
 
 After successfully running the server, Sequelize will create a `project` table in the newly created database. Add your projects to this table
+
 (Note : Add projects feature will be added to the client application soon)
 
 ### Step 4 : Access the client application
