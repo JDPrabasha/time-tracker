@@ -32,7 +32,7 @@ cd into the server folder and run
 
 to install the dependancies.
 
-Alter credentials as neccessary in /server/util/database.js
+Alter credentials as neccessary in `/server/util/database.js`
 
 Next, run 
 
