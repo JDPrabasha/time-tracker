@@ -24,9 +24,6 @@ This repository contains both the client and server side of the aplication. Both
 
 ### Setup
 
-1. Create a database called "time_tracker" using mysql
-2. Alter database credentials as neccessary in /server/util/database.js
-
 ### Step 1 : Running the Server application
 
 cd into the server folder and run
@@ -34,6 +31,14 @@ cd into the server folder and run
 ### `npm install`
 
 to install the dependancies.
+
+Alter credentials as neccessary in `/server/util/database.js`
+
+Next, run 
+
+###  `npx sequelize-cli db:create`
+
+to create the database.
 
 Then start the Server application by running:
 
@@ -45,13 +50,9 @@ This will run an instance of the server on http://localhost:3000
 
 cd into the client folder and run
 
-### `npm install`
+### `npm install && npm start`
 
-to install the dependancies.
-
-Then start the Client application by running:
-
-### `npm start`
+to install the dependancies and start the Client application.
 
 ### Step 3 : Add your projects
 
