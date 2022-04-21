@@ -54,13 +54,7 @@ cd into the client folder and run
 
 to install the dependancies and start the Client application.
 
-### Step 3 : Add your projects
-
-After successfully running the server, Sequelize will create a `project` table in the newly created database. Add your projects to this table
-
-(Note : Add projects feature will be added to the client application soon)
-
-### Step 4 : Access the client application
+### Step 3 : Access the client application
 
 You can now access the client application running on your browser and add your logs as neccessary
 
