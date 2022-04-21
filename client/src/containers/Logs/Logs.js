@@ -8,12 +8,11 @@ function Logs() {
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/logs")
-      .then((response) => setLogs(response.data));
-  }, [logs]);
-
-  console.log(logs);
+    axios.get("http://localhost:3000/logs").then((response) => {
+      setLogs(response.data);
+      console.log(logs);
+    });
+  }, []);
 
   return (
     <div className="logs">
