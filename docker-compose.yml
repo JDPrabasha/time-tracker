@@ -1,6 +1,23 @@
 version: '3'
 
 services:
+
+  db:
+    
+      restart: always
+      image: mysql:5.7
+
+      command: --default-authentication-plugin=mysql_native_password
+
+      environment:
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: time_tracker
+        MYSQL_USER: dulaj
+        MYSQL_PASSWORD: password
+        MYSQL_TCP_PORT: 3306
+
+      ports:
+        - "3306:3307"
   backend:
     build:
       context: ./server
@@ -8,6 +25,8 @@ services:
     image: "dulaj/time-tracker-backend"
     ports:
       - "3000:3000"
+    links:
+      - "db:db"
   frontend:
     build:
       context: ./client
@@ -18,21 +37,5 @@ services:
     links:
       - "backend:be"
   
-  db:
   
-    restart: always
-    image: mysql:5.7
-
-    command: --default-authentication-plugin=mysql_native_password
-
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: time_tracker
-      MYSQL_USER: dulaj
-      MYSQL_PASSWORD: password
-      MYSQL_TCP_PORT: 3306
-
-    ports:
-      - "3306:3307"
-    links:
-      - "backend:be"
+    
