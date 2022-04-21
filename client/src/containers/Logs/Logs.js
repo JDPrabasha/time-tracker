@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import "./Logs.scss";
 import { Log } from "../../components";
+import { MdFormatListBulleted } from "react-icons/md";
 
 function Logs() {
   const axios = require("axios");
@@ -17,7 +18,11 @@ function Logs() {
   return (
     <div className="logs">
       <div className="logs__container">
-        <h1 className="logs__title"> Logs</h1>
+        <div className="row logs__header">
+          <MdFormatListBulleted className="bullets" />
+
+          <h1 className="logs__title">Logs</h1>
+        </div>
         {logs.map((log) => (
           <Log
             name={log.project.name}

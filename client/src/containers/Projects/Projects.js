@@ -22,8 +22,9 @@ function Projects() {
         <div className="row projects__header">
           <HiOutlineClipboardList className="clipboard" />
 
-          <h1 className="projects__title">Quick add</h1>
+          <h1 className="projects__title">Quick Add</h1>
         </div>
+        <h5 className="projects__add">CREATE PROJECT</h5>
         {projects.map((project) => (
           <Project name={project.name} key={project.id} id={project.id} />
         ))}

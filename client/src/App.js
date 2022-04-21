@@ -1,10 +1,11 @@
 import "./App.scss";
-import { Log, Project } from "./components";
+
 import { Logs, Insights, Projects } from "./containers";
 
 function App() {
   return (
     <div className="App">
+      <h1 className="App__title">TIMETRACKER</h1>
       <div className="row">
         <Projects />
         <Logs />

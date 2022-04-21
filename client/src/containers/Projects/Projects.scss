@@ -4,17 +4,28 @@
 }
 
 .projects__container {
-  padding: 2em;
   border-radius: 50px;
-  background-color: #ebebeb;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  padding: 3em;
 }
 
 .projects__header {
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
 }
 
 .projects__title {
   font-weight: var(--font-weight-emphasis);
+}
+
+.projects__add {
+  margin-bottom: 1em;
+  color: var(--color-purple);
+}
+
+.projects__add:hover {
+  cursor: pointer;
+  color: #8822b4;
 }
 
 .clipboard {

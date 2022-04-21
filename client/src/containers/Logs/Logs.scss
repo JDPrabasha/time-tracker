@@ -1,11 +1,25 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+
 .logs__container {
-  padding: 2em;
+  padding: 2.5em;
   border-radius: 50px;
-  background-color: #ebebeb;
-  width: 42rem;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  width: 42em;
+  margin-left: 2em;
+}
+
+.logs__header {
+  margin-bottom: 1.3em;
 }
 
 .logs__title {
-  margin-bottom: 1em;
   font-weight: --var(--font-weight-emphasis);
+}
+
+.bullets {
+  font-size: 2em;
 }

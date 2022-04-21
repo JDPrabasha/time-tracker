@@ -1,42 +1,48 @@
 .App {
-  -webkit-animation: color-change-5x 8s linear infinite alternate both;
-  animation: color-change-5x 8s linear infinite alternate both;
+  // -webkit-animation: color-change-5x 8s linear infinite alternate both;
+  // animation: color-change-5x 8s linear infinite alternate both;
   min-height: 100vh;
-  padding-left: 3em;
+  padding-left: 4em;
   padding-top: 3em;
 }
 
-@-webkit-keyframes color-change-5x {
-  0% {
-    background: #19dcea;
-  }
-  25% {
-    background: #b22cff;
-  }
-  50% {
-    background: #ea2222;
-  }
-  75% {
-    background: #f5be10;
-  }
-  100% {
-    background: #3bd80d;
-  }
+.App__title {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-@keyframes color-change-5x {
-  0% {
-    background: #19dcea;
-  }
-  25% {
-    background: #b22cff;
-  }
-  50% {
-    background: #ea2222;
-  }
-  75% {
-    background: #f5be10;
-  }
-  100% {
-    background: #3bd80d;
-  }
-}
+
+// @-webkit-keyframes color-change-5x {
+//   0% {
+//     background: #19dcea;
+//   }
+//   25% {
+//     background: #b22cff;
+//   }
+//   50% {
+//     background: #ea2222;
+//   }
+//   75% {
+//     background: #f5be10;
+//   }
+//   100% {
+//     background: #3bd80d;
+//   }
+// }
+// @keyframes color-change-5x {
+//   0% {
+//     background: #19dcea;
+//   }
+//   25% {
+//     background: #b22cff;
+//   }
+//   50% {
+//     background: #ea2222;
+//   }
+//   75% {
+//     background: #f5be10;
+//   }
+//   100% {
+//     background: #3bd80d;
+//   }
+// }

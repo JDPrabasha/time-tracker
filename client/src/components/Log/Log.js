@@ -6,11 +6,11 @@ function Log(props) {
     <div className="log">
       <div className="row">
         <div className="log__time">
-          <h2 className="log__time__duration">
+          <a className="log__time__duration">
             <span>{props.beginTime}</span>
             <span> - </span>
             <span>{props.endTime}</span>
-          </h2>
+          </a>
           <p className="log__time__date">{props.date.split("T")[0]}</p>
         </div>
 
