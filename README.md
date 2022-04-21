@@ -19,42 +19,14 @@ This repository contains both the client and server side of the aplication. Both
 
 ### Prerequisites
 
-- A running version of mysql
-- nodeJS
+- [Docker](https://www.docker.com)
 
 ### Setup
 
-### Step 1 : Running the Server application
+Within the root directory, run
 
-cd into the server folder and run
+#### `docker-compose up -d --build`
 
-### `npm install`
+to build the application.
 
-to install the dependancies.
-
-Alter credentials as neccessary in `/server/util/database.js`
-
-Next, run 
-
-###  `npx sequelize-cli db:create`
-
-to create the database.
-
-Then start the Server application by running:
-
-### `node server`
-
-This will run an instance of the server on http://localhost:3000
-
-### Step 2 : Running the Client application
-
-cd into the client folder and run
-
-### `npm install && npm start`
-
-to install the dependancies and start the Client application.
-
-### Step 3 : Access the client application
-
-You can now access the client application running on your browser and add your logs as neccessary
-
+Access the application at http://localhost:3006
