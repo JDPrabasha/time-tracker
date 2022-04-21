@@ -12,7 +12,7 @@ function Logs() {
       setLogs(response.data);
       console.log(logs);
     });
-  }, []);
+  }, [logs]);
 
   return (
     <div className="logs">
