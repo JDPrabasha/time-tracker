@@ -1,5 +1,6 @@
 import "./Project.scss";
 import { default as Modal } from "../Modal/Modal";
+import { default as ProjectModal } from "../Modal/ProjectModal/ProjectModal";
 import { React, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RiAddLine } from "react-icons/ri";

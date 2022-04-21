@@ -1,6 +1,4 @@
 .App {
-  // -webkit-animation: color-change-5x 8s linear infinite alternate both;
-  // animation: color-change-5x 8s linear infinite alternate both;
   min-height: 100vh;
   padding-left: 3em;
   padding-top: 3em;
@@ -11,38 +9,3 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-// @-webkit-keyframes color-change-5x {
-//   0% {
-//     background: #19dcea;
-//   }
-//   25% {
-//     background: #b22cff;
-//   }
-//   50% {
-//     background: #ea2222;
-//   }
-//   75% {
-//     background: #f5be10;
-//   }
-//   100% {
-//     background: #3bd80d;
-//   }
-// }
-// @keyframes color-change-5x {
-//   0% {
-//     background: #19dcea;
-//   }
-//   25% {
-//     background: #b22cff;
-//   }
-//   50% {
-//     background: #ea2222;
-//   }
-//   75% {
-//     background: #f5be10;
-//   }
-//   100% {
-//     background: #3bd80d;
-//   }
-// }

@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require("../controllers/Project");
 
 router.get("/", controller.getProjects);
+router.post("/", controller.addProject);
 router.get("/log", controller.getLogs);
 router.post("/log/:id", controller.addLog);
 

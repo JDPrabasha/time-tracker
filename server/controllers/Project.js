@@ -29,6 +29,16 @@ module.exports = {
       });
   },
 
+  addProject: async (req, res) => {
+    const newProject = {
+      name: req.body.name,
+      color: req.body.color,
+    };
+    Project.create(newProject).then((result) => {
+      res.send(result);
+    });
+  },
+
   getLogs: async (req, res) => {
     Project.findAll({ include: Log }).then((data) => {
       res.send(data);
