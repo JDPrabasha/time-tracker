@@ -9,6 +9,7 @@ function App() {
       <div className="row">
         <Projects />
         <Logs />
+        <Insights />
       </div>
     </div>
   );

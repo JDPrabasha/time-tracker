@@ -1,0 +1,25 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.insights__container {
+  padding: 2.5em;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+
+  margin-left: 2em;
+}
+
+.insights__header {
+  margin-bottom: 1.3em;
+}
+
+.insights__title {
+  font-weight: --var(--font-weight-emphasis);
+}
+
+.bulb {
+  font-size: 2em;
+}
