@@ -3,21 +3,21 @@
     "username": "root",
     "password": "password",
     "database": "time_tracker",
-    "host": "localhost",
+    "host": "db",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "password",
     "database": "time_tracker",
-    "host": "localhost",
+    "host": "db",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "password",
     "database": "time_tracker",
-    "host": "localhost",
+    "host": "db",
     "dialect": "mysql"
   }
 }
