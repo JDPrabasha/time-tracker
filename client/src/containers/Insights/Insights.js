@@ -1,10 +1,7 @@
 import { React, useEffect, useState } from "react";
 import "./Insights.scss";
 import { MdLightbulbOutline } from "react-icons/md";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
-
-ChartJS.register(ArcElement, Tooltip, Legend);
+import { Chart } from "../../components";
 
 function Insights() {
   const axios = require("axios");
@@ -53,7 +50,7 @@ function Insights() {
 
   useEffect(() => {
     chart();
-  }, []);
+  }, [chartData]);
 
   return (
     <div className="insights">
@@ -62,7 +59,7 @@ function Insights() {
           <MdLightbulbOutline className="bulb" />
           <h1 className="insights__title"> Insights</h1>
         </div>
-        <Doughnut data={chartData} key={Math.random()} />
+        <Chart data={chartData} />
       </div>
     </div>
   );
