@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import "./Modal.scss";
 import { RiCloseLine } from "react-icons/ri";
-import axios from "axios";
 import { motion } from "framer-motion";
+import { addLog } from "../../services/api";
 
 const dropIn = {
   hidden: {
@@ -35,11 +35,7 @@ const Modal = ({ setIsOpen, id }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    axios
-      .post("http://localhost:3000/project/log/" + id, {
-        date: new Date(),
-        ...formValue,
-      })
+    addLog(id, { date: new Date(), ...formValue })
       .then(function (response) {
         console.log(response);
         setIsOpen(false);

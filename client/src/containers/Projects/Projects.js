@@ -4,16 +4,14 @@ import "./Projects.scss";
 import { Project, ProjectModal } from "../../components";
 import { HiOutlineClipboardList } from "react-icons/hi";
 import { AnimatePresence } from "framer-motion";
+import { getProjects } from "../../services/api";
 
 function Projects() {
-  const axios = require("axios");
   const [projects, setProjects] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/project")
-      .then((response) => setProjects(response.data));
+    getProjects().then((response) => setProjects(response.data));
   }, [projects]);
 
   console.log(projects);

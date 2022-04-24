@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import "./ProjectModal.scss";
 import { RiCloseLine } from "react-icons/ri";
 import axios from "axios";
+import { addProject } from "../../../services/api";
 
 const dropIn = {
   hidden: {
@@ -42,10 +43,9 @@ function ProjectModal({ setIsOpen }) {
     event.preventDefault();
     console.log(projectValue);
 
-    axios
-      .post("http://localhost:3000/project", {
-        ...projectValue,
-      })
+    addProject({
+      ...projectValue,
+    })
       .then(function (response) {
         console.log(response);
         setIsOpen(false);

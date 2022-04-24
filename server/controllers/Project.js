@@ -1,6 +1,5 @@
 const Project = require("../models/project");
 const Log = require("../models/log");
-const sequelize = require("sequelize");
 
 module.exports = {
   getProjects: async (req, res) => {
