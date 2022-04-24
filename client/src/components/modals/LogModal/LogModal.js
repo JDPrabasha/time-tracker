@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import "./Modal.scss";
+import "./LogModal.scss";
 import { RiCloseLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { addLog } from "../../services/api";

@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import "./ProjectModal.scss";
 import { RiCloseLine } from "react-icons/ri";
-import axios from "axios";
 import { addProject } from "../../../services/api";
 
 const dropIn = {
