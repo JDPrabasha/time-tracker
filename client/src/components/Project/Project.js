@@ -1,5 +1,5 @@
 import "./Project.scss";
-import { default as LogModal } from "../modals/LogModal";
+import { default as LogModal } from "../modals/LogModal/LogModal";
 import { React, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { RiAddLine } from "react-icons/ri";

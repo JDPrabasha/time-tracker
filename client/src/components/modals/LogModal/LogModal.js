@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import "./LogModal.scss";
 import { RiCloseLine } from "react-icons/ri";
 import { motion } from "framer-motion";
-import { addLog } from "../../services/api";
+import { addLog } from "../../../services/api";
 
 const dropIn = {
   hidden: {
