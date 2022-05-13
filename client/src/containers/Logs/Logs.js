@@ -15,12 +15,12 @@ function Logs() {
   }, [logs]);
 
   return (
-    <div className="logs">
+    <div className="logs w-6/12 ml-4">
       <div className="logs__container">
-        <div className="row logs__header">
-          <MdFormatListBulleted className="bullets" />
+        <div className="row logs__header mb-4">
+          <MdFormatListBulleted className="bullets text-2xl" />
 
-          <h1 className="logs__title">Logs</h1>
+          <h1 className="logs__title text-2xl font-bold">Logs</h1>
         </div>
         {logs.map((log) => (
           <Log

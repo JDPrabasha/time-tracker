@@ -53,7 +53,7 @@ function Insights() {
   }, [chartData]);
 
   return (
-    <div className="insights">
+    <div className="insights w-3/12 mr-6">
       <div className="insights__container">
         <div className="insights__header row">
           <MdLightbulbOutline className="bulb" />

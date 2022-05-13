@@ -1,11 +1,13 @@
 import "./App.scss";
+import { ReactComponent as Logo } from "./assets/images/logo.svg";
 
 import { Logs, Insights, Projects } from "./containers";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="App__title">TIMETRACKER</h1>
+      <Logo className="w-16" />
+
       <div className="row">
         <Projects />
         <Logs />

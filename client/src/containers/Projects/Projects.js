@@ -25,7 +25,7 @@ function Projects() {
           <h1 className="projects__title text-2xl font-bold ">Quick Add</h1>
         </div>
         <h5
-          className="projects__add bg-purple-400 font-semibold px-2 py-1 my-4 rounded-lg w-fit"
+          className="projects__add bg-blue-400 font-semibold px-2 py-1 my-4 rounded-lg w-fit"
           onClick={() => setIsOpen(true)}
         >
           CREATE PROJECT
