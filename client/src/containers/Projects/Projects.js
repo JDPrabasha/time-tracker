@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import "./Projects.scss";
 import { Project, ProjectModal } from "../../components";
 import { HiOutlineClipboardList } from "react-icons/hi";
 import { AnimatePresence } from "framer-motion";
@@ -17,7 +16,7 @@ function Projects() {
   console.log(projects);
 
   return (
-    <div className="projects w-3/12 border border-blue-300 p-3 rounded-xl">
+    <div className="projects w-3/12 border  p-3 rounded-xl shadow-sm">
       <div className="projects__container">
         <div className="row projects__header">
           <HiOutlineClipboardList className="clipboard text-2xl" />

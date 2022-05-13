@@ -3,6 +3,7 @@ import "./LogModal.scss";
 import { RiCloseLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { addLog } from "../../../services/api";
+import { TimeInput } from "@mantine/dates";
 
 const dropIn = {
   hidden: {
@@ -73,6 +74,12 @@ const Modal = ({ setIsOpen, id }) => {
               <RiCloseLine style={{ marginBottom: "-3px" }} />
             </button>
             <form className="form" onSubmit={handleSubmit}>
+              <TimeInput
+                label="Pick time"
+                placeholder="Pick time"
+                className="w-1/3"
+                defaultValue={new Date()}
+              />
               <div>
                 <p>Select a time:</p>
                 <input

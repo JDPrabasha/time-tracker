@@ -1,5 +1,4 @@
 import { React, useEffect, useState } from "react";
-import "./Insights.scss";
 import { MdLightbulbOutline } from "react-icons/md";
 import { Chart } from "../../components";
 
@@ -53,7 +52,7 @@ function Insights() {
   }, [chartData]);
 
   return (
-    <div className="insights w-4/12 mr-6 ml-8 p-3 border rounded-lg">
+    <div className="insights w-4/12 mr-6 ml-8 p-3 border rounded-lg shadow-sm">
       <div className="insights__container">
         <div className="insights__header flex items-center gap-4 mb-6">
           <MdLightbulbOutline className="bulb text-2xl" />

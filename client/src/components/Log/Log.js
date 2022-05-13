@@ -15,7 +15,9 @@ function Log(props) {
             <span> - </span>
             <span>{props.endTime}</span>
           </a>
-          <p className="log__time__date">{props.date.split("T")[0]}</p>
+          <p className="log__time__date text-sm text-gray-800">
+            {props.date.split("T")[0]}
+          </p>
         </div>
       </div>
     </div>

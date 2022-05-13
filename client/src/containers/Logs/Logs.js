@@ -1,5 +1,4 @@
 import { React, useEffect, useState } from "react";
-import "./Logs.scss";
 import { Log } from "../../components";
 import { MdFormatListBulleted } from "react-icons/md";
 
@@ -15,7 +14,7 @@ function Logs() {
   }, [logs]);
 
   return (
-    <div className="logs w-6/12 ml-8 border rounded-lg p-3">
+    <div className="logs w-6/12 ml-8 border rounded-lg p-3 shadow-sm">
       <div className="logs__container">
         <div className="row logs__header mb-4">
           <MdFormatListBulleted className="bullets text-2xl" />
