@@ -3,7 +3,7 @@ import "./Log.scss";
 
 function Log(props) {
   return (
-    <div className="log border rounded-lg px-3 py-1">
+    <div className="log border rounded-lg px-3 py-1 mb-4">
       <div className="row">
         <div className="log__time">
           <a className="log__time__duration">
