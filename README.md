@@ -1,6 +1,6 @@
-# Time-Tracker Application
+# Horus
 
-Time-Tracker (working title) is an application that can be used to keep track of the time you spend on your projects every day. It serves as a measure of your daily productivity. 
+Horus is an application that can be used to keep track of the time you spend on your projects every day. It serves as a measure of your daily productivity. 
 
 The primary purpose of building this application is to overcome the paywall presented by similar applications, along with presenting a slick UI/UX experience. 
 
@@ -17,16 +17,4 @@ This repository contains both the client and server side of the aplication. Both
 
 ## How to Run
 
-### Prerequisites
-
-- [Docker](https://www.docker.com)
-
-### Setup
-
-Within the root directory, run
-
-#### `docker-compose up -d --build`
-
-to build the application.
-
-Access the application at http://localhost:3006
+Visit the last stable commit via [this link](https://github.com/JDPrabasha/time-tracker/tree/08865eb13b8647eeb6bc8ed028203d822dd0cda8) and follow the instructions in README.md
