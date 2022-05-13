@@ -6,12 +6,21 @@ import { AnimatePresence } from "framer-motion";
 import { getProjects } from "../../services/api";
 import { Modal } from "@mantine/core";
 import { ColorInput } from "@mantine/core";
+import { addProject } from "../../services/api";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [opened, setOpened] = useState(false);
   const [value, setValue] = useState("");
+  const [name, setName] = useState("");
+
+  const handleSubmit = () => {
+    addProject({ name: name, color: value }).then(function (response) {
+      console.log(response);
+      setOpened(false);
+    });
+  };
 
   useEffect(() => {
     getProjects().then((response) => setProjects(response.data));
@@ -29,15 +38,19 @@ function Projects() {
           <label className="text-xs">Project</label>
           <input
             placeholder="Add project name"
-            name="description"
+            name="name"
             class="form-input text-sm rounded"
+            onChange={(event) => setName(event.target.value)}
           />
         </div>
         <label className="text-xs ">Project Color</label>
         <ColorInput className="mb-4 mt-2" value={value} onChange={setValue} />
 
         <div className="buttons flex justify-center gap-6 mt-4">
-          <a className="text-sm bg-blue-500 text-white px-3 py-2 cursor-pointer hover:bg-blue-300 rounded-sm">
+          <a
+            onClick={handleSubmit}
+            className="text-sm bg-blue-500 text-white px-3 py-2 cursor-pointer hover:bg-blue-300 rounded-sm"
+          >
             Add Project
           </a>
           <a
