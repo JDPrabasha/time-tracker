@@ -9,7 +9,6 @@ function Logs() {
   useEffect(() => {
     axios.get("http://localhost:3000/logs").then((response) => {
       setLogs(response.data);
-      console.log(logs);
     });
   }, [logs]);
 

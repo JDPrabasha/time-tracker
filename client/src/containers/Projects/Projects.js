@@ -13,8 +13,6 @@ function Projects() {
     getProjects().then((response) => setProjects(response.data));
   }, [projects]);
 
-  console.log(projects);
-
   return (
     <div className="projects w-3/12 border  p-3 rounded-xl shadow-sm">
       <div className="projects__container">
@@ -24,7 +22,7 @@ function Projects() {
           <h1 className="projects__title text-2xl font-bold ">Quick Add</h1>
         </div>
         <h5
-          className="projects__add bg-blue-400 font-semibold px-2 py-1 my-4 rounded-lg w-fit"
+          className="projects__add cursor-pointer hover:bg-blue-200 transition-all ease-linear bg-blue-400 font-semibold px-2 py-1 my-4 rounded-lg w-fit"
           onClick={() => setIsOpen(true)}
         >
           CREATE PROJECT

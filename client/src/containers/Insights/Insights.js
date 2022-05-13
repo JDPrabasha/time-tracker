@@ -12,12 +12,11 @@ function Insights() {
       const labels = response.data.map((project) => {
         return project.name;
       });
-      console.log(labels);
 
       const counts = response.data.map((project) => {
         return project.logs.length;
       });
-      console.log(counts);
+
       setChartData({
         labels: labels,
         datasets: [
