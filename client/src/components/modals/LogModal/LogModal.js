@@ -5,28 +5,7 @@ import { motion } from "framer-motion";
 import { addLog } from "../../../services/api";
 import { TimeInput } from "@mantine/dates";
 
-const dropIn = {
-  hidden: {
-    y: "-100vh",
-    opacity: 0,
-  },
-  visible: {
-    y: "0",
-    opacity: 1,
-    transition: {
-      duration: 0.1,
-      type: "spring",
-      damping: 25,
-      stiffness: 400,
-    },
-  },
-  exit: {
-    y: "100vh",
-    opacity: 0,
-  },
-};
-
-const Modal = ({ setIsOpen, id }) => {
+const Modal = ({ setOpened, id }) => {
   const [formValue, setformValue] = useState({
     beginTime: "",
     endTime: "",
@@ -39,11 +18,11 @@ const Modal = ({ setIsOpen, id }) => {
     addLog(id, { date: new Date(), ...formValue })
       .then(function (response) {
         console.log(response);
-        setIsOpen(false);
+        setOpened(false);
       })
       .catch(function (error) {
         console.log(error);
-        setIsOpen(false);
+        setOpened(false);
       });
   };
 
@@ -55,72 +34,56 @@ const Modal = ({ setIsOpen, id }) => {
   };
 
   return (
-    <>
-      <div className="darkBG" onClick={() => setIsOpen(false)} />
-      <div className="centered">
-        <motion.div
-          onClick={(e) => e.stopPropagation()}
-          className="modal orange-gradient"
-          variants={dropIn}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          <div className="modal">
-            <div className="modalHeader">
-              <h5 className="heading">Add Log</h5>
-            </div>
-            <button className="closeBtn" onClick={() => setIsOpen(false)}>
-              <RiCloseLine style={{ marginBottom: "-3px" }} />
-            </button>
-            <form className="form" onSubmit={handleSubmit}>
-              <TimeInput
-                label="Pick time"
-                placeholder="Pick time"
-                className="w-1/3"
-                defaultValue={new Date()}
-              />
-              <div>
-                <p>Select a time:</p>
-                <input
-                  type="time"
-                  id="beginTime"
-                  name="beginTime"
-                  onChange={handleChange}
-                ></input>
-              </div>
-              <div>
-                <p>Select a time:</p>
-                <input
-                  type="time"
-                  id="endTime"
-                  name="endTime"
-                  onChange={handleChange}
-                ></input>
-              </div>
-              <div>
-                <p>Enter description</p>
-                <textarea name="description" onChange={handleChange}></textarea>
-              </div>
-
-              <div className="modalActions">
-                <div className="actionsContainer">
-                  <button className="deleteBtn" type="submit">
-                    Add
-                  </button>
-                  <button
-                    className="cancelBtn"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </motion.div>
+    <Modal
+      centered
+      opened={true}
+      onClose={() => setOpened(false)}
+      title="Add Log Entry"
+      onChange={handleChange}
+    >
+      <div className="flex flex-col gap-2 mb-4">
+        <label className="text-xs">Start time</label>
+        <input
+          onChange={handleChange}
+          name="beginTime"
+          type="time"
+          class="form-input text-sm rounded "
+        />
       </div>
-    </>
+      <div className="flex flex-col gap-2 mb-4">
+        <label className="text-xs">End time</label>
+        <input
+          onChange={handleChange}
+          type="time"
+          name="endTime"
+          class="form-input text-sm rounded "
+        />
+      </div>
+      <div className="flex flex-col gap-2 mb-4">
+        <label className="text-xs">Description</label>
+        <input
+          onChange={handleChange}
+          placeholder="Add description"
+          name="description"
+          class="form-input text-sm rounded "
+        />
+      </div>
+
+      <div className="buttons flex justify-center gap-6 mt-4">
+        <a
+          onClick={handleSubmit}
+          className="text-sm bg-blue-500 text-white px-3 py-2 cursor-pointer hover:bg-blue-300 rounded-sm"
+        >
+          Add Entry
+        </a>
+        <a
+          onClick={() => setOpened(false)}
+          className="text-sm bg-red-500 text-white px-3 py-2 cursor-pointer rounded-sm hover:bg-red-300 "
+        >
+          Cancel
+        </a>
+      </div>
+    </Modal>
   );
 };
 

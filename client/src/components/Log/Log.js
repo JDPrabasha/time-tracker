@@ -1,13 +1,17 @@
 import React from "react";
 import "./Log.scss";
+import { BsCircleFill } from "react-icons/bs";
 
 function Log(props) {
   return (
-    <div className="log border rounded-lg px-3 py-1 mb-4">
+    <div className="log border rounded-lg px-3 py-1 mb-4 hover:-translate-y-1 transition-all ease-linear">
       <div className="flex items-center">
         <div className="log__entry">
           <p className="log__entry__activity font-semibold">{props.entry}</p>
-          <h4 className="log__entry__project text-sm">{props.name}</h4>
+          <div className="flex gap-1 items-center ">
+            <BsCircleFill size={10} />
+            <h4 className="log__entry__project text-sm">{props.name}</h4>
+          </div>
         </div>
         <div className="log__time ml-auto mr-3">
           <a className="log__time__duration">

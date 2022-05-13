@@ -23,7 +23,7 @@ function Project(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    addLog(1, { date: new Date(), ...formValue })
+    addLog(props.id, { date: new Date(), ...formValue })
       .then(function (response) {
         console.log(response);
         setOpened(false);
