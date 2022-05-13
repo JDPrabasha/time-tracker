@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;600;900&family=Open+Sans:wght@300;500;700&family=Roboto:wght@300;700;900&display=swap");
 * {
   margin: 0;
@@ -14,13 +18,4 @@
   --font-weight-body: 300;
   --font-weight-title: 500;
   --font-weight-emphasis: 900;
-}
-
-body {
-  font-family: "Barlow", sans-serif;
-  font-weight: var(--font-weight-body);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #505050;
-  background-color: #e6e7ed;
 }

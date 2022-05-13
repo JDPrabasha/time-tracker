@@ -17,14 +17,17 @@ function Projects() {
   console.log(projects);
 
   return (
-    <div className="projects">
+    <div className="projects w-3/12 border border-blue-300 p-3 rounded-xl">
       <div className="projects__container">
         <div className="row projects__header">
-          <HiOutlineClipboardList className="clipboard" />
+          <HiOutlineClipboardList className="clipboard text-2xl" />
 
-          <h1 className="projects__title">Quick Add</h1>
+          <h1 className="projects__title text-2xl font-bold ">Quick Add</h1>
         </div>
-        <h5 className="projects__add" onClick={() => setIsOpen(true)}>
+        <h5
+          className="projects__add bg-purple-400 font-semibold px-2 py-1 my-4 rounded-lg w-fit"
+          onClick={() => setIsOpen(true)}
+        >
           CREATE PROJECT
         </h5>
         {projects.map((project) => (
