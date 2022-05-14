@@ -2,20 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;600;900&family=Open+Sans:wght@300;500;700&family=Roboto:wght@300;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root {
-  --color-primary: #f8f0e3;
-  --color-secondary: #fbd6d2;
-  --color-purple: #a63ec5;
-  --color-pink: #f190b7;
-  --color-font-grey: #8c8c8c;
-  --font-weight-body: 300;
-  --font-weight-title: 500;
-  --font-weight-emphasis: 900;
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Project, ProjectModal } from "../../components";
+import { Project } from "../../components";
 import { HiOutlineClipboardList } from "react-icons/hi";
-import { AnimatePresence } from "framer-motion";
+
 import { getProjects } from "../../services/api";
 import { Modal } from "@mantine/core";
 import { ColorInput } from "@mantine/core";
@@ -62,7 +62,7 @@ function Projects() {
         </div>
       </Modal>
       <div className="projects__container">
-        <div className="row projects__header">
+        <div className="flex gap-3 items-center projects__header">
           <HiOutlineClipboardList className="clipboard text-2xl" />
 
           <h1 className="projects__title text-2xl font-bold ">Quick Add</h1>
@@ -76,19 +76,6 @@ function Projects() {
         {projects.map((project) => (
           <Project name={project.name} key={project.id} id={project.id} />
         ))}
-        <AnimatePresence
-          // Disable any initial animations on children that
-          // are present when the component is first rendered
-          initial={false}
-          // Only render one component at a time.
-          // The exiting component will finish its exit
-          // animation before entering component is rendered
-          exitBeforeEnter={true}
-          // Fires when all exiting nodes have completed animating out
-          onExitComplete={() => null}
-        >
-          {isOpen && <ProjectModal setIsOpen={setIsOpen} />}
-        </AnimatePresence>
       </div>
     </div>
   );

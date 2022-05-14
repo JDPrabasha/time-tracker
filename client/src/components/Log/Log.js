@@ -1,5 +1,5 @@
 import React from "react";
-import "./Log.scss";
+
 import { BsCircleFill } from "react-icons/bs";
 
 function Log(props) {

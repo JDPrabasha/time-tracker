@@ -1,24 +1,15 @@
-import "./Project.scss";
-import { default as LogModal } from "../modals/LogModal/LogModal";
 import { React, useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import { RiAddLine } from "react-icons/ri";
-import { Modal, Input, Button } from "@mantine/core";
-import { TimeInput } from "@mantine/dates";
-import { BiTimeFive } from "react-icons/bi";
+import { Modal } from "@mantine/core";
 import { addLog } from "../../services/api";
-import { useForm } from "@mantine/form";
 
 function Project(props) {
-  const form = useForm({
-    initialValues: { beginTime: "", endTime: "", description: "" },
-  });
   const [formValue, setformValue] = useState({
     beginTime: "",
     endTime: "",
     description: "",
   });
-  const [isOpen, setIsOpen] = useState(false);
+
   const [opened, setOpened] = useState(false);
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -55,7 +46,7 @@ function Project(props) {
             onChange={handleChange}
             name="beginTime"
             type="time"
-            class="form-input text-sm rounded "
+            className="form-input text-sm rounded "
           />
         </div>
         <div className="flex flex-col gap-2 mb-4">
@@ -93,28 +84,17 @@ function Project(props) {
         </div>
       </Modal>
 
-      <div className="row">
+      <div className="flex items-center">
         <p className="project__title">{props.name}</p>
 
         <RiAddLine
           style={{ marginBottom: "-3px" }}
-          className="project__add"
+          className="project__add ml-auto text-blue-700 mr-12 cursor-pointer hover:scale-150  hover:rotate-90 transition-all ease-linear"
           onClick={() => setOpened(true)}
         />
       </div>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
-      >
-        {isOpen && <LogModal setIsOpen={setIsOpen} id={props.id} />}
-      </AnimatePresence>
     </div>
   );
 }
-
-Project.defaultProps = {
-  name: "Default",
-};
 
 export default Project;
