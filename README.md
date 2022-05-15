@@ -15,6 +15,12 @@ The primary purpose of building this application is to overcome the paywall pres
 
 This repository contains both the client and server side of the aplication. Both the client and server have to be initialized independantly.
 
-## How to Run
+## Setup
 
-Visit the last stable commit via [this link](https://github.com/JDPrabasha/time-tracker/tree/08865eb13b8647eeb6bc8ed028203d822dd0cda8) and follow the instructions in README.md
+Within the root directory, run
+
+#### `docker-compose up -d --build`
+
+to build the application.
+
+Access the application at http://localhost:3006
