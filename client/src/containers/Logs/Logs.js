@@ -24,6 +24,7 @@ function Logs() {
           <Log
             name={log.project.name}
             entry={log.description}
+            color={log.project.color}
             date={log.date}
             beginTime={log.beginTime}
             endTime={log.endTime}

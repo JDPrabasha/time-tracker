@@ -55,7 +55,7 @@ function Project(props) {
             onChange={handleChange}
             type="time"
             name="endTime"
-            class="form-input text-sm rounded "
+            className="form-input text-sm rounded "
           />
         </div>
         <div className="flex flex-col gap-2 mb-4">
@@ -64,7 +64,7 @@ function Project(props) {
             onChange={handleChange}
             placeholder="Add description"
             name="description"
-            class="form-input text-sm rounded "
+            className="form-input text-sm rounded "
           />
         </div>
 

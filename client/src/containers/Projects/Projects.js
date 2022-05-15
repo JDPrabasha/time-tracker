@@ -10,7 +10,6 @@ import { addProject } from "../../services/api";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
   const [opened, setOpened] = useState(false);
   const [value, setValue] = useState("");
   const [name, setName] = useState("");
@@ -39,7 +38,7 @@ function Projects() {
           <input
             placeholder="Add project name"
             name="name"
-            class="form-input text-sm rounded"
+            className="form-input text-sm rounded"
             onChange={(event) => setName(event.target.value)}
           />
         </div>
