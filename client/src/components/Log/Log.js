@@ -9,7 +9,8 @@ function Log(props) {
         <div className="log__entry">
           <p className="log__entry__activity font-semibold">{props.entry}</p>
           <div
-            className={"flex gap-1 items-center  text-[" + props.color + "]"}
+            className="flex gap-1 items-center "
+            style={{ color: props.color }}
           >
             <BsCircleFill size={10} />
             <h4 className="log__entry__project text-sm">{props.name}</h4>
