@@ -33,9 +33,28 @@ function Logs() {
 
   useEffect(() => {
     getLogs().then((response) => {
-      setLogs(response.data);
+      let groupedLogs = groupBy(response.data, "date");
+      setLogs(groupedLogs);
     });
   }, [logs]);
+
+  
+  /*---------get the time difference between beginTime and endTime in hours and minutes---------*/
+  /*---------------------------and append the values to the objects---------------------------- */
+  Object.keys(logs).map((item) => {
+    {logs[""+item+""].map((log,i) => {
+      /*---------adding a random date to the time to get it as a date object----------- */
+      var begin_time = new Date("2020-03-10 "+logs[""+item+""][i].beginTime);
+      var end_time = new Date("2020-03-10 "+logs[""+item+""][i].endTime);
+      let timeDiff = (end_time.getTime() - begin_time.getTime())/(1000*3600);
+      let hours = Math.floor(timeDiff)
+      let minutes = Math.floor((timeDiff - hours)*60);
+      logs[""+item+""][i].hours = hours;
+      logs[""+item+""][i].minutes = minutes;
+    }   
+  )}
+    
+  });
 
   return (
     <div className="logs w-6/12 ml-8 border rounded-lg p-3 shadow-sm">
