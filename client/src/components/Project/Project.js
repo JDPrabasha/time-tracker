@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import { RiAddLine } from "react-icons/ri";
 import { Modal } from "@mantine/core";
 import { addLog } from "../../services/api";
@@ -88,8 +88,8 @@ function Project(props) {
         <p className="project__title">{props.name}</p>
 
         <RiAddLine
-          style={{ marginBottom: "-3px" }}
-          className="project__add ml-auto text-blue-700 mr-12 cursor-pointer hover:scale-150  hover:rotate-90 transition-all ease-linear"
+          style={{ marginBottom: "-3px", color: props.color }}
+          className="project__add ml-auto mr-12 cursor-pointer hover:scale-150  hover:rotate-90 transition-all ease-linear"
           onClick={() => setOpened(true)}
         />
       </div>

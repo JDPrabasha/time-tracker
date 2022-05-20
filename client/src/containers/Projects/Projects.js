@@ -73,7 +73,7 @@ function Projects() {
           CREATE PROJECT
         </h5>
         {projects.map((project) => (
-          <Project name={project.name} key={project.id} id={project.id} />
+          <Project name={project.name} key={project.id} id={project.id} color={project.color} />
         ))}
       </div>
     </div>
