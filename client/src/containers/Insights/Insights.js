@@ -55,7 +55,7 @@ function Insights() {
       <div className="insights__container">
         <div className="insights__header flex items-center gap-4 mb-6">
           <MdLightbulbOutline className="bulb text-2xl" />
-          <h1 className="insights__title font-bold text-2xl"> Insights</h1>
+          <h1 className="insights__title font-heading text-2xl"> Insights</h1>
         </div>
         <Chart data={chartData} />
       </div>

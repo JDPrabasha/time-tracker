@@ -87,7 +87,7 @@ function Logs() {
         <div className="flex gap-3 items-center logs__header mb-4">
           <MdFormatListBulleted className="bullets text-2xl" />
 
-          <h1 className="logs__title text-2xl font-bold">Logs</h1>
+          <h1 className="logs__title text-2xl font-heading">Logs</h1>
         </div>
         <div>
           {Object.keys(logs).map((item, i) => (

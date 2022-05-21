@@ -64,10 +64,10 @@ function Projects() {
         <div className="flex gap-3 items-center projects__header">
           <HiOutlineClipboardList className="clipboard text-2xl" />
 
-          <h1 className="projects__title text-2xl font-bold ">Quick Add</h1>
+          <h1 className="projects__title text-2xl font-heading  ">Quick Add</h1>
         </div>
         <h5
-          className="projects__add cursor-pointer hover:bg-yellow-200 transition-all ease-linear text-black bg-yellow-400 active:scale-95 font-semibold px-2 py-1 my-4 rounded-lg w-fit"
+          className="projects__add cursor-pointer hover:bg-yellow-200 transition-all ease-linear text-black bg-yellow-400 active:scale-95 font-heading px-2 py-1 my-4 rounded-lg w-fit"
           onClick={() => setOpened(true)}
         >
           CREATE PROJECT
