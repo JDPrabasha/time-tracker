@@ -1,11 +1,10 @@
-import { ReactComponent as Logo } from "./assets/images/logo.svg";
-
+import { Header } from "./components";
 import { Logs, Insights, Projects } from "./containers";
 
 function App() {
   return (
-    <div className="App bg-slate-50 pt-8 pl-4">
-      <Logo className="w-16 ml-6  hover:rotate-2 transition-all ease-linear" />
+    <div className="App bg-zinc-900 text-white">
+      <Header />
       <div className="flex items-start mt-8 px-8">
         <Projects />
         <Logs />

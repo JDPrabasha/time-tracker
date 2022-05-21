@@ -26,7 +26,7 @@ function Projects() {
   }, [projects]);
 
   return (
-    <div className="projects w-3/12 border  p-3 rounded-xl shadow-sm">
+    <div className="projects border-gray-800 bg-gray-900 w-3/12 border  p-3 rounded-xl shadow-sm">
       <Modal
         centered
         opened={opened}
@@ -67,13 +67,18 @@ function Projects() {
           <h1 className="projects__title text-2xl font-bold ">Quick Add</h1>
         </div>
         <h5
-          className="projects__add cursor-pointer hover:bg-blue-200 transition-all ease-linear bg-blue-400 font-semibold px-2 py-1 my-4 rounded-lg w-fit"
+          className="projects__add cursor-pointer hover:bg-yellow-200 transition-all ease-linear text-black bg-yellow-400 active:scale-95 font-semibold px-2 py-1 my-4 rounded-lg w-fit"
           onClick={() => setOpened(true)}
         >
           CREATE PROJECT
         </h5>
         {projects.map((project) => (
-          <Project name={project.name} key={project.id} id={project.id} color={project.color} />
+          <Project
+            name={project.name}
+            key={project.id}
+            id={project.id}
+            color={project.color}
+          />
         ))}
       </div>
     </div>
