@@ -7,3 +7,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+
+@font-face {
+  font-family: "SatoshiBold";
+  src: url("./assets/fonts/Satoshi-Bold.otf");
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/Satoshi-Regular.otf");
+}
+
+@font-face {
+  font-family: "SatoshiMedium";
+  src: url("./assets/fonts/Satoshi-Medium.otf");
+}
