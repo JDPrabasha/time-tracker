@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RiAddLine } from "react-icons/ri";
 import { Modal } from "@mantine/core";
-import { addLog } from "../../services/api";
+import { addLog } from "../services/api";
 
 function Project(props) {
   const [formValue, setformValue] = useState({

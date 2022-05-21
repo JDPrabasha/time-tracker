@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { MdLightbulbOutline } from "react-icons/md";
-import { Chart } from "../../components";
+import { Chart } from "../components";
 
 function Insights() {
   const axios = require("axios");

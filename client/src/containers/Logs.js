@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Log } from "../../components";
+import { Log } from "../components";
 import { MdFormatListBulleted } from "react-icons/md";
-import { getLogs } from "../../services/api";
+import { getLogs } from "../services/api";
 import { LogarithmicScale } from "chart.js";
 
 /*---------grouping the logs by their created date---------*/
