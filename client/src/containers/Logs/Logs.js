@@ -64,13 +64,18 @@ function Logs() {
   Object.keys(logs).map((item) => {
     {
       logs["" + item + ""].map((log, i) => {
+        // console.log(logs["" + item + ""][i].beginTime);
         /*---------adding a random date to the time to get it as a date object----------- */
         var begin_time = new Date(
-          "2020-03-10 " + logs["" + item + ""][i].beginTime
+          "01/01/2007 " + logs["" + item + ""][i].beginTime
         );
+
+        console.log(begin_time);
+
         var end_time = new Date(
-          "2020-03-10 " + logs["" + item + ""][i].endTime
+          "01/01/2007 " + logs["" + item + ""][i].endTime
         );
+
         let timeDiff =
           (end_time.getTime() - begin_time.getTime()) / (1000 * 3600);
         let hours = Math.floor(timeDiff);
