@@ -26,7 +26,7 @@ function Projects() {
   }, [projects]);
 
   return (
-    <div className="projects border-gray-800 bg-gray-900 w-3/12 border  p-3 rounded-xl shadow-sm">
+    <div className="projects hover:scale-105 transition-all ease-linear border-gray-800 bg-gray-900 w-3/12 border  p-3 rounded-xl shadow-sm">
       <Modal
         centered
         opened={opened}
@@ -54,7 +54,7 @@ function Projects() {
           </a>
           <a
             onClick={() => setOpened(false)}
-            className="text-sm bg-red-500 text-white px-3 py-2 cursor-pointer rounded-sm hover:bg-red-300 "
+            className="text-sm  bg-red-500 text-white px-3 py-2 cursor-pointer rounded-sm hover:bg-red-300 "
           >
             Cancel
           </a>
