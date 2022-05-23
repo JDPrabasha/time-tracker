@@ -1,12 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Project } from "../../components";
+import { Project } from "../components";
 import { HiOutlineClipboardList } from "react-icons/hi";
 
-import { getProjects } from "../../services/api";
 import { Modal } from "@mantine/core";
 import { ColorInput } from "@mantine/core";
-import { addProject } from "../../services/api";
+import { getProjects, addProject } from "../services/api";
 
 function Projects() {
   const [projects, setProjects] = useState([]);

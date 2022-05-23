@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MdLightbulbOutline } from "react-icons/md";
-import { Chart } from "../../components";
+import { Chart } from "../components";
 
 function Insights() {
   const axios = require("axios");
@@ -17,29 +17,20 @@ function Insights() {
         return project.logs.length;
       });
 
+      const colors = response.data.map((project) => {
+        return project.color;
+      });
+
       setChartData({
         labels: labels,
         datasets: [
           {
             label: "time spent",
             data: counts,
-            backgroundColor: [
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(255, 206, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(246, 158, 135,0.2)",
-              "rgba(246, 35, 135,0.2)",
-            ],
-            borderColor: [
-              "rgba(255, 99, 132, 1)",
-              "rgba(54, 162, 235, 1)",
-              "rgba(255, 206, 86, 1)",
-              "rgba(75, 192, 192, 1)",
-              "rgba(246, 158, 135,1)",
-              "rgba(246, 35, 135,1)",
-            ],
+            backgroundColor: colors,
+
             borderWidth: 1,
+            cutout: "70%",
           },
         ],
       });
